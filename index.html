@@ -116,118 +116,53 @@ body, html {
   text-align: center;
 }
 
-.button1 {
+.button {
   position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: skyblue;
+  border: 2px solid #f1f1f1;
+  font-size: 180%;
+  color: #c38b5f;
+  padding: 20px;
+  width: 15%;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button-button1 {
   transform: translate(-200%, 200%);
-  top: 50%;
-  left: 50%;
-  background-color: skyblue;
-  border: 2px solid #f1f1f1;
-  font-size: 28px;
-  color: #c38b5f;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
-.button1:after {
-  content: "";
-  background: #90EE90;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
 }
 
-.button1:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
-
-.button2 {
-  position: fixed;
+.button-button2 {
   transform: translate(-50%, 200%);
-  top: 50%;
-  left: 50%;
-  background-color: skyblue;
-  border: 2px solid #f1f1f1;
-  font-size: 28px;
-  color: #c38b5f;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
-.button2:after {
-  content: "";
-  background: #90EE90;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
 }
 
-.button2:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
-
-.button3 {
-  position: fixed;
+.button-button3 {
   transform: translate(100%, 200%);
-  top: 50%;
-  left: 50%;
-  background-color: skyblue;
-  border: 2px solid #f1f1f1;
-  font-size: 28px;
-  color: #c38b5f;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
-.button3:after {
-  content: "";
-  background: #4CAF50;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
-
-.button3:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
 }
 </style>
 <script>
@@ -254,9 +189,9 @@ body, html {
 <div class="bg-image img5"></div>
 <div class="bg-image img6"></div>
 
-<button class="button1" onclick="display()">Real Estate</button>
-<button class="button2" onclick="display()">Construction</button>
-<button class="button3" onclick="display()">Renting</button>
+<button class="button button-button1" onclick="display()">Real Estate</button>
+<button class="button button-button2" onclick="display()">Construction</button>
+<button class="button button-button3" onclick="display()">Renting</button>
 <div class="bg-text">Real Estate & Construction</div>
 
 
